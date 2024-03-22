@@ -92,8 +92,8 @@ public class RBTree<T> {
         System.out.println("Nowy node: "+newNode.key+" "+newNode.value);
         System.out.println("Nowy node: "+currentNode.key+" "+currentNode.value);
         System.out.println("Nowy node: "+root.lewo+" "+root.lewo);
-        if(hei > ){
-             = hei;
+        if(hei > maxHei){
+            maxHei = hei;
         }
 
         while(newNode.rodzic != root){
