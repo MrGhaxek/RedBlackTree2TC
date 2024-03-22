@@ -235,7 +235,7 @@ public class RBTree<T> {
         else{
             System.out.println("Liczba: " + curNode.key);
             kid = curNode;
-            return curnode.value;
+            T val = curNode.value;
             System.out.println("Liczba: " + kid.key);
             while(kid.prawo != null || kid.lewo != null){
                 if(kid.prawo != null){
@@ -278,8 +278,9 @@ public class RBTree<T> {
             }
 
         }
-
+            
             curNode = null;
+            return curNode.value;
     }
 
 
