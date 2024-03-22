@@ -205,7 +205,7 @@ public class RBTree<T> {
         }
     }
 
-    void delete(int key){
+    T remove(int key){
         Node<T> curNode = root;
         while (curNode.key != key){
             if(key < curNode.key){
@@ -214,7 +214,7 @@ public class RBTree<T> {
                 }
                 else{
                     System.out.println("Nie znaleziono elementu");
-                    return;
+                    return null;
                 }
             }
             else{
@@ -223,7 +223,7 @@ public class RBTree<T> {
                 }
                 else{
                     System.out.println("Nie znaleziono elementu");
-                    return;
+                    return null;
                 }
             }
         }
@@ -235,6 +235,7 @@ public class RBTree<T> {
         else{
             System.out.println("Liczba: " + curNode.key);
             kid = curNode;
+            return curnode.value;
             System.out.println("Liczba: " + kid.key);
             while(kid.prawo != null || kid.lewo != null){
                 if(kid.prawo != null){
