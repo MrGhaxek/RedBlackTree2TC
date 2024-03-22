@@ -287,12 +287,12 @@ public class RBTree<T> {
         System.out.println(maxHei);
     }
 
-    void get(int key){
+    T get(int key){
         Node curNode = root;
         while (curNode != null){
             if(curNode.key == key){
                 System.out.println(curNode.key+" = "+curNode.value);
-                break;
+                return curNode.value;
             }
             else if(key < curNode.key){
                 if(curNode.lewo != null){
@@ -300,7 +300,7 @@ public class RBTree<T> {
                 }
                 else{
                     System.out.println("Nie znaleziono elementu");
-                    break;
+                    return null;
                 }
             }
             else{
@@ -309,7 +309,7 @@ public class RBTree<T> {
                 }
                 else{
                     System.out.println("Nie znaleziono elementu");
-                    break;
+                    return null;
                 }
             }
         }
